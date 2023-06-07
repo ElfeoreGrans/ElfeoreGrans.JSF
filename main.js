@@ -182,7 +182,7 @@ Vue.component('container_hover2', {
 })
 
 var menu = new Vue({
-    el: '#main',
+    el: '.menu1',
     data: {
         layout: 'grid',
         articles: [{
@@ -191,12 +191,30 @@ var menu = new Vue({
     }
 })
 
+var menu = new Vue({
+    el: '.menu2',
+    data: {
+        layout: 'grid',
+        articles: [{
+            
+        }]
+    }
+})
+var menu = new Vue({
+    el: '.menu3',
+    data: {
+        layout: 'grid',
+        articles: [{
+            
+        }]
+    }
+})
+
+
 let block1 = document.getElementById('promo_block1'),
     block2 = document.getElementById('promo_block2'),    
     block3 = document.getElementById('promo_block3');
 
-    
-    // console.log("pabotaet" + block1.classList);
     
     block1.addEventListener("mouseover", meow);
     block1.addEventListener("mouseleave", not_meow);
