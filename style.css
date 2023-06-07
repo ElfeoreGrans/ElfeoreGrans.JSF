@@ -1,0 +1,343 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 25px;
+    background-color: #3A2B2B;
+    color: white;
+}
+
+                                        /*  Шляппи  */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(img/header_background.png) no-repeat center top;
+}
+.header_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    margin-top: 50px;
+}
+#header_name{
+    font-size: 30px;
+    margin-top: 25px;
+}
+.header_nav{
+    z-index: 1;
+}
+.header_nav ul{
+    font-size: 30px;
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0;
+    justify-content: space-between;
+    width: 500px;
+}
+.header_nav a{
+    text-decoration: none;
+}
+.header_nav a:link {
+    color: white;
+}
+.header_nav a:visited {
+    color: white;
+}
+.header_nav a:hover {
+    color: #FFBA01;
+}
+.header_nav a:active {
+    color: white;
+}
+.header_dop{
+    background-color: #FFBA01;
+    margin-top: 805px;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header_dops{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+                                        /*  Основа  */
+                                        /*  МЕНЮ  */
+.menu{
+    width: 1350px;
+    margin: auto;
+    text-align: center;
+}
+h2{
+    margin-top: 100px;
+    font-size: 50px;
+    text-decoration: underline;
+    text-decoration-color: #FFBA01 ;
+    text-align: center;
+}
+.grid-icon{
+    position: relative;
+    left: 500px;
+    bottom: 30px;
+}
+.list-icon{
+    position: relative;
+    left: 500px;
+    bottom: 30px;
+}
+h3{
+    margin-top: -30px;
+    margin-bottom: 70px;
+}
+.kebabs{
+    height: 950px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.kebab{
+    width: 420px;
+    height: 380px;
+    box-shadow: -3px 3px 10px #FFBA01;
+    text-align: start;
+}
+.kebab img{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 16px;
+}
+.kebab span{
+    margin-left: 20px;
+}
+.burgers{
+    height: 950px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.burger{
+    width: 420px;
+    height: 380px;
+    box-shadow: -3px 3px 10px #FFBA01;
+    text-align: start;
+}
+.burger img{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 16px;
+}
+.burger span{
+    margin-left: 20px;
+}
+.dops{
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.dop{
+    width: 420px;
+    height: 380px;
+    box-shadow: -3px 3px 10px #FFBA01;
+    text-align: start;
+}
+.dop img{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 16px;
+}
+.dop span{
+    margin-left: 20px;
+}
+                                     /*  МЕНЮ при ховере  */
+.menu_hover{
+    width: 1350px;
+    margin: auto;
+    text-align: center;
+}
+.containers_hover{
+    margin-bottom: 100px;
+}
+.container_hover{
+    display: flex;
+    justify-content: center;
+    width: 1360px;
+    align-items: center;
+    box-shadow: -3px 3px 10px #FFBA01;
+    margin-bottom: 50px;
+}
+.container_hover_photo{
+    width: 500px;
+    margin-top: 6px;
+    margin-left: -55px;
+}
+.container_hover_name{
+    width: 453px;
+}
+.container_hover ul{
+    list-style: none;
+    padding-inline-start: 0;
+    font-size: 20px;
+}
+.container_hover_list_name{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.container_hover_compound{
+    width: 453px;
+}
+
+                                    /* Анимация переходов */
+.no-mode-fade-enter-active, .no-mode-fade-leave-active {
+  transition: opacity .5s
+}
+
+.no-mode-fade-enter-from, .no-mode-fade-leave-to {
+  opacity: 0
+}
+
+
+                                        /*  АКЦИИ  */
+.promos{
+    width: 1268px;
+    margin: auto;
+}
+.promo{
+    margin-top: 70px;
+    margin-bottom: -30px;
+}
+.promo img{
+    box-shadow: -3px 3px 10px #FFBA01;
+}
+.promo h3{
+    font-size: 30px;
+    position: relative;
+    bottom: 460px;
+    left: 30px;
+}
+                                /*  АКЦИИ при ховере  */
+.promo_hover{
+    display: flex;
+    width: 1268px;
+    height: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+    align-items: center;
+    box-shadow: -3px 3px 10px #FFBA01;
+}
+.promo_hover h3{
+    display: block;
+    width: 400px;
+    font-size: 30px;
+    position: relative;
+    bottom: 150px;
+    left: 30px;
+}
+.promo_hover1_span{
+    width: 500px;
+    position: relative;
+    margin-left: -300px;
+    margin-right: 50px;
+    word-wrap: break-word;
+}
+.promo_hover2_span{
+    width: 500px;
+    position: relative;
+    margin-left: -300px;
+    margin-right: 50px;
+    word-wrap: break-word;
+}
+.promo_hover3_span{
+    width: 500px;
+    position: relative;
+    margin-left: -300px;
+    margin-right: 50px;
+    word-wrap: break-word;
+}
+                                        /*  КОНТАКТЫ  */
+.contacts{
+    width: 960px;
+    margin: auto;
+    text-align: center;
+}
+.place{
+    width: 960px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.place_left{
+    text-align: start;
+    width: 500px;
+    word-wrap: break-word;
+}
+.place_right{
+    text-align: end;
+}
+.up{
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: 116px;
+    height: 107px;
+    background-image: url(img/up_1.png);
+    transition: all 500ms ease-out;
+}
+.up:hover{
+    height: 157px;
+    background-image: url(img/up_2.png);
+    transition: all 500ms ease-in;
+}
+.footer_dop{
+    margin-top: 100px;
+    background-color: #FFBA01;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer_dops{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+                                        /*  Данжен  */
+footer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.social{
+    width: 290px;
+    text-align: end;
+}
+.social img{
+    margin-top: 20px;
+    margin-left: 35px;
+}
+.footer_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    width: 600px;
+}
+#footer_name{
+    font-size: 30px;
+    margin-top: 25px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.footer_contacts{
+    width: 300px;
+}
