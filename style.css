@@ -66,6 +66,21 @@ header{
     margin-left: 150px;
     margin-right: 150px;
 }
+.up{
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: 116px;
+    height: 107px;
+    background-image: url(img/up_1.png);
+    background-repeat: no-repeat;
+    transition: all 500ms ease-out;
+}
+.up:hover{
+    height: 157px;
+    background-image: url(img/up_2.png);
+    transition: all 500ms ease-in;
+}
 
                                         /*  Основа  */
                                         /*  МЕНЮ  */
@@ -194,19 +209,14 @@ h3{
 }
 
                                     /* Анимация переходов */
-.no-mode-fade-enter-active, .no-mode-fade-leave-active {
-  transition: opacity .5s
-}
 
-.no-mode-fade-enter-from, .no-mode-fade-leave-to {
-  opacity: 0
-}
 
 
                                         /*  АКЦИИ  */
-.promos{
+.promos_content{
     width: 1268px;
     margin: auto;
+    transform-style: preserve-3d;
 }
 .promo{
     margin-top: 70px;
@@ -221,8 +231,16 @@ h3{
     bottom: 460px;
     left: 30px;
 }
+.transition {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.not_transition {
+    opacity: 1;
+    transition: opacity 1s;
+}
                                 /*  АКЦИИ при ховере  */
-.promo_hover{
+.promo_back{
     display: flex;
     width: 1268px;
     height: 500px;
@@ -231,29 +249,33 @@ h3{
     align-items: center;
     box-shadow: -3px 3px 10px #FFBA01;
 }
-.promo_hover h3{
+.promo_back {
+    position: absolute;
+    z-index: -1;
+}
+.promo_back h3{
     display: block;
     width: 400px;
     font-size: 30px;
     position: relative;
-    bottom: 150px;
+    bottom: 165px;
     left: 30px;
 }
-.promo_hover1_span{
+.promo_back1_span{
     width: 500px;
     position: relative;
     margin-left: -300px;
     margin-right: 50px;
     word-wrap: break-word;
 }
-.promo_hover2_span{
+.promo_back2_span{
     width: 500px;
     position: relative;
     margin-left: -300px;
     margin-right: 50px;
     word-wrap: break-word;
 }
-.promo_hover3_span{
+.promo_back3_span{
     width: 500px;
     position: relative;
     margin-left: -300px;
@@ -262,39 +284,36 @@ h3{
 }
                                         /*  КОНТАКТЫ  */
 .contacts{
-    width: 960px;
+    width: 1500px;
     margin: auto;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 .place{
-    width: 960px;
+    width: 700px;
+    font-size: 20px;
+    background-color: #FFBA01;
+    color: #202020;
+    border-radius: 20px;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }
 .place_left{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: start;
-    width: 500px;
+    width: 450px;
     word-wrap: break-word;
 }
 .place_right{
+    padding-right: 10px;
     text-align: end;
-}
-.up{
-    position: fixed;
-    bottom: 100px;
-    right: 100px;
-    width: 116px;
-    height: 107px;
-    background-image: url(img/up_1.png);
-    transition: all 500ms ease-out;
-}
-.up:hover{
-    height: 157px;
-    background-image: url(img/up_2.png);
-    transition: all 500ms ease-in;
 }
 .footer_dop{
     margin-top: 100px;
