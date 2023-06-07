@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header_name">
+            <img src="img/logo.png">
+            <span id="header_name">Junky Street Food</span>
+        </div>
+        <div class="header_nav">
+            <ul>
+                <li><a href="#menu">МЕНЮ</a></li>
+                <li><a href="#promos">АКЦИИ</a></li>
+                <li><a href="#contacts">КОНТАКТЫ</a></li>
+            </ul>
+        </div>
+        <div class="header_dop">
+            <div id="header_dops"><img src="img/header_dop1.png"></div>
+            <div id="header_dops"><img src="img/header_dop2.png"></div>
+            <div id="header_dops"><img src="img/header_dop3.png"></div>
+        </div>
+        <a href="#"><div class="up"></div></a>
+    </header>
+    <main>
+        <section id="main">
+            <p><a name="menu"></a></p>
+            <transition name="slide">
+            <div v-if="layout == 'grid'" class="menu">
+                <h2>МЕНЮ</h2>
+                <a class="grid-icon" v-bind:class="{'active':layout == 'grid'}" v-on:click="layout = 'grid'"><img src="img/grid.png" width="30px" height="30px"></a>
+                <a class="list-icon" v-bind:class="{'active':layout == 'list'}" v-on:click="layout = 'list'"><img src="img/list.png" width="30px" height="30px"></a>
+                <h3>ШАВЕРМА</h3>
+                <div><menu_kebabs/></div>
+                <h3>БУРГЕРЫ</h3>
+                <div><menu_burgers/></div>
+                <h3>ДОПОЛНИТЕЛЬНО</h3>
+                <div><menu_dops/></div>
+            </div>
+            <div v-if="layout == 'list'" class="menu_hover">
+                <h2>МЕНЮ</h2>
+                <a class="grid-icon" v-bind:class="{'active':layout == 'grid'}" v-on:click="layout = 'grid'"><img src="img/grid.png" width="30px" height="30px"></a>
+                <a class="list-icon" v-bind:class="{'active':layout == 'list'}" v-on:click="layout = 'list'"><img src="img/list.png" width="30px" height="30px"></a>
+                <h3>ШАВЕРМА</h3>
+                <div><container_hover/></div>
+                <h3>БУРГЕРЫ</h3>
+                <div><container_hover2/></div>
+                <h3>ДОПОЛНИТЕЛЬНО</h3>
+                <div><menu_dops/></div>
+            </div>
+            </transition>
+        </section>
+        <section>
+            <p><a name="promos"></a></p>
+            <div class="promos">
+                <h2>АКЦИИ</h2>
+                <div class="promo">
+                    <img src="img/promo1.png" alt="БОЛЬШАЯ ПОКУПКА">
+                    <h3>БОЛЬШАЯ ПОКУПКА</h3>
+                </div>
+                <div class="promo">
+                    <img src="img/promo2.png" alt="ДЕНЬ РОЖДЕНИЯ">
+                    <h3>ДЕНЬ РОЖДЕНИЯ</h3>
+                </div>
+                <div class="promo">
+                    <img src="img/promo3.png" alt="ПОСТОЯННЫЙ КЛИЕНТ">
+                    <h3>ПОСТОЯННЫЙ КЛИЕНТ</h3>
+                </div>
+            </div>
+            <div class="promos_hover" hidden>
+                <h2>АКЦИИ</h2>
+                <div class="promo_hover">
+                    <h3>БОЛЬШАЯ ПОКУПКА</h3>
+                    <div class="promo_hover1_span"><span>При оплате заказа, в котором содержится больше 5-и позиций, при оплате заказа будет учитываться скидка до 30% (в зависимости от размера заказа). </span></div>
+                    <img src="img/promo_hover1.png" alt="БОЛЬШАЯ ПОКУПКА">
+                </div>
+                <div class="promo_hover">
+                    <h3>ДЕНЬ РОЖДЕНИЯ</h3>
+                    <div class="promo_hover2_span"><span>При оплате заказа в день рождения действует скидка до 25% (в зависимости от итоговой суммы заказа). При оплате необходимо будет предоставить документ, подстверждающий вашу дату рождения. </span></div>
+                <img src="img/promo_hover2.png" alt="БОЛЬШАЯ ПОКУПКА">
+                </div>
+                <div class="promo_hover">
+                    <h3>ПОСТОЯННЫЙ КЛИЕНТ</h3>
+                    <div class="promo_hover3_span"><span>У нас действует система постоянных клиентов, которая позволяет накапливать баллы за каждый ваш заказ. Эти баллы можно использовать при следующий заказах для уменьшения их стоимости. </span></div>
+                <img src="img/promo_hover3.png" alt="БОЛЬШАЯ ПОКУПКА">
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <p><a name="contacts"></a></p>
+            <h2>КОНТАКТЫ</h2>
+            <div class="place">
+                <div class="place_left"><span>Санкт-Петербург <br> Каменноостровский просп., 37</span></div>
+                <div class="place_right"><span>10:00-22:00 (Пн-Вс)</span></div>
+            </div>
+            <div class="place">
+                <div class="place_left"><span>Санкт-Петербург <br> Средний просп. Васильевского острова,
+                36/40, 2 этаж</span></div>
+                <div class="place_right"><span>10:00-22:00 (Пн-Вс)</span></div>
+            </div>
+            <div class="place">
+                <div class="place_left"><span>Санкт-Петербург <br> Московский просп., 4</span></div>
+                <div class="place_right"></div><span>10:00-22:00 (Пн-Вс)</span></div>
+            </div>
+            <div class="place">
+                <div class="place_left"><span>Санкт-Петербург <br> Кушелевская дорога, 1, корп. 1ГМ Спар,
+                    этаж 1</span></div>
+                <div class="place_right"><span>10:00-22:00 (Пн-Вс)</span></div>
+            </div>
+        </section>
+        <div class="footer_dop">
+            <div id="footer_dops"><img src="img/header_dop1.png"></div>
+            <div id="footer_dops"><img src="img/header_dop2.png"></div>
+            <div id="footer_dops"><img src="img/header_dop3.png"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <span>Мы в соц.сетях:</span>
+            <div>
+                <img src="img/logo_vk.png" alt="VK">
+                <img src="img/logo_inst.png" alt="Instagram">
+            </div>
+        </div>
+        <div class="footer_name">
+            <img src="img/logo.png">
+            <span id="footer_name">Junky Street Food</span>
+        </div>
+        <div class="footer_contacts">
+            <span>Контактный номер:</span> <br> <br>
+            <span id="number">+7(999)999-99-99</span>
+        </div>
+    </footer>
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
