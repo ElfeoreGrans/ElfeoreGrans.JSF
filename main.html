@@ -12,17 +12,17 @@
 </head>
 <body>
     <header>
-        <div class="header_name">
+        <div class="header_name" id="header_name">
             <img src="img/logo.png">
             <span id="header_name">Junky Street Food</span>
         </div>
-        <div class="header_nav">
-            <ul>
+        <nav class="header_nav">
+            <ul class="header_nav_list">
                 <li><a href="#menu">МЕНЮ</a></li>
                 <li><a href="#promos">АКЦИИ</a></li>
                 <li><a href="#contacts">КОНТАКТЫ</a></li>
             </ul>
-        </div>
+        </nav>
         <div class="header_dop">
             <div id="header_dops"><img src="img/header_dop1.png"></div>
             <div id="header_dops"><img src="img/header_dop2.png"></div>
@@ -34,28 +34,42 @@
         <section id="main">
             <p><a name="menu"></a></p>
             <h2>МЕНЮ</h2>
-            <div v-if="layout == 'grid'" class="menu">
-                <a class="grid-icon" v-bind:class="{'active':layout == 'grid'}" v-on:click="layout = 'grid'"><img src="img/grid.png" width="30px" height="30px"></a>
-                <a class="list-icon" v-bind:class="{'active':layout == 'list'}" v-on:click="layout = 'list'"><img src="img/list.png" width="30px" height="30px"></a>
-                <h3>ШАВЕРМА</h3>
-                <div><menu_kebabs/></div>
-                <h3>БУРГЕРЫ</h3>
-                <div><menu_burgers/></div>
-                <h3>ДОПОЛНИТЕЛЬНО</h3>
-                <div><menu_dops/></div>
+            <div class="menu1">
+                <div v-if="layout == 'grid'" class="menu">
+                    <a class="grid-icon" v-bind:class="{'active':layout == 'grid'}" v-on:click="layout = 'grid'"><img src="img/grid.png" width="30px" height="30px"></a>
+                    <a class="list-icon" v-bind:class="{'active':layout == 'list'}" v-on:click="layout = 'list'"><img src="img/list.png" width="30px" height="30px"></a>
+                    <h3>ШАВЕРМА</h3>
+                    <div><menu_kebabs/></div>
+                </div>
+                <div v-if="layout == 'list'" class="menu_hover">
+                    <a class="grid-icon" v-bind:class="{'active':layout == 'grid'}" v-on:click="layout = 'grid'"><img src="img/grid.png" width="30px" height="30px"></a>
+                    <a class="list-icon" v-bind:class="{'active':layout == 'list'}" v-on:click="layout = 'list'"><img src="img/list.png" width="30px" height="30px"></a>
+                    <h3>ШАВЕРМА</h3>
+                    <div><container_hover/></div>
+                </div>
             </div>
-            <div v-if="layout == 'list'" class="menu_hover">
-                <a class="grid-icon" v-bind:class="{'active':layout == 'grid'}" v-on:click="layout = 'grid'"><img src="img/grid.png" width="30px" height="30px"></a>
-                <a class="list-icon" v-bind:class="{'active':layout == 'list'}" v-on:click="layout = 'list'"><img src="img/list.png" width="30px" height="30px"></a>
-                <h3>ШАВЕРМА</h3>
-                <div><container_hover/></div>
-                <h3>БУРГЕРЫ</h3>
-                <div><container_hover2/></div>
-                <h3>ДОПОЛНИТЕЛЬНО</h3>
-                <div><menu_dops/></div>
+            <div class="menu2">
+                <div v-if="layout == 'grid'" class="menu">
+                    <a class="grid-icon" v-bind:class="{'active':layout == 'grid'}" v-on:click="layout = 'grid'"><img src="img/grid.png" width="30px" height="30px"></a>
+                    <a class="list-icon" v-bind:class="{'active':layout == 'list'}" v-on:click="layout = 'list'"><img src="img/list.png" width="30px" height="30px"></a>
+                    <h3>БУРГЕРЫ</h3>
+                    <div><menu_burgers/></div>
+                </div>
+                <div v-if="layout == 'list'" class="menu_hover">
+                    <a class="grid-icon" v-bind:class="{'active':layout == 'grid'}" v-on:click="layout = 'grid'"><img src="img/grid.png" width="30px" height="30px"></a>
+                    <a class="list-icon" v-bind:class="{'active':layout == 'list'}" v-on:click="layout = 'list'"><img src="img/list.png" width="30px" height="30px"></a>
+                    <h3>БУРГЕРЫ</h3>
+                    <div><container_hover2/></div>
+                </div>
+            </div>
+            <div class="menu3">
+                <div class="menu">
+                    <h3>ДОПОЛНИТЕЛЬНО</h3>
+                    <div><menu_dops/></div>
+                </div>
             </div>
         </section>
-        <section>
+        <section id="promos">
             <p><a name="promos"></a></p>
             <h2>АКЦИИ</h2>
             <div class="promos1">
