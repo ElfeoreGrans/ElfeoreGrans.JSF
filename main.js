@@ -190,3 +190,27 @@ var menu = new Vue({
         }]
     }
 })
+
+let block1 = document.getElementById('promo_block1'),
+    block2 = document.getElementById('promo_block2'),    
+    block3 = document.getElementById('promo_block3');
+
+    
+    // console.log("pabotaet" + block1.classList);
+    
+    block1.addEventListener("mouseover", meow);
+    block1.addEventListener("mouseleave", not_meow);
+    block2.addEventListener("mouseover", meow);
+    block2.addEventListener("mouseleave", not_meow);
+    block3.addEventListener("mouseover", meow);
+    block3.addEventListener("mouseleave", not_meow);
+    
+
+function meow() {
+    this.classList.remove('not_transition');
+    this.classList.add('transition');
+}
+function not_meow() {
+    this.classList.remove('transition');
+    this.classList.add('not_transition');
+}
