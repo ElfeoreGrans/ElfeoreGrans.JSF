@@ -5,7 +5,7 @@ body{
     margin: 0;
     font-family: Montserrat;
     font-size: 25px;
-    background-color: #3A2B2B;
+    background-color: #101010;
     color: white;
 }
 
@@ -40,6 +40,7 @@ header{
 }
 .header_nav a{
     text-decoration: none;
+    transition: all 0.1s ease-out;
 }
 .header_nav a:link {
     color: white;
@@ -99,12 +100,12 @@ h2{
 .grid-icon{
     position: relative;
     left: 500px;
-    bottom: 30px;
+    top: 9px;
 }
 .list-icon{
     position: relative;
     left: 500px;
-    bottom: 30px;
+    top: 9px;
 }
 h3{
     margin-top: -30px;
@@ -119,6 +120,7 @@ h3{
 .kebab{
     width: 420px;
     height: 380px;
+    background-color: #202020;
     box-shadow: -3px 3px 10px #FFBA01;
     text-align: start;
 }
@@ -170,6 +172,7 @@ h3{
 .dop span{
     margin-left: 20px;
 }
+
                                      /*  МЕНЮ при ховере  */
 .menu_hover{
     width: 1350px;
@@ -208,15 +211,10 @@ h3{
     width: 453px;
 }
 
-                                    /* Анимация переходов */
-
-
-
                                         /*  АКЦИИ  */
 .promos_content{
     width: 1268px;
     margin: auto;
-    transform-style: preserve-3d;
 }
 .promo{
     margin-top: 70px;
@@ -233,12 +231,13 @@ h3{
 }
 .transition {
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.5s;
 }
 .not_transition {
     opacity: 1;
-    transition: opacity 1s;
+    transition: opacity 0.5s;
 }
+
                                 /*  АКЦИИ при ховере  */
 .promo_back{
     display: flex;
@@ -282,37 +281,38 @@ h3{
     margin-right: 50px;
     word-wrap: break-word;
 }
+
                                         /*  КОНТАКТЫ  */
 .contacts{
-    width: 1500px;
+    width: 1300px;
     margin: auto;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
 }
 .place{
-    width: 700px;
+    width: 600px;
+    height: 150px;
     font-size: 20px;
     background-color: #FFBA01;
     color: #202020;
-    border-radius: 20px;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
 .place_left{
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: start;
-    width: 450px;
+    width: 340px;
     word-wrap: break-word;
 }
 .place_right{
-    padding-right: 10px;
+    padding-right: 20px;
     text-align: end;
 }
 .footer_dop{
